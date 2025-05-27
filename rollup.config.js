@@ -11,14 +11,9 @@ const meta = JSON.parse(readFileSync('./package.json', 'utf-8'));
 
 export default {
   input: 'index.js',
-  // external: ['color-name', 'html-to-vdom', 'jszip', 'virtual-dom', 'xmlbuilder2', 'html-entities'],
   plugins: [
     alias({
-      entries: [
-        { find: 'crypto', replacement: 'crypto-browserify' },
-        // { find: 'stream', replacement: 'stream-browserify' },
-        // { find: 'buffer', replacement: 'buffer' }
-      ]
+      entries: []
     }),
     resolve({
       preferBuiltins: false,

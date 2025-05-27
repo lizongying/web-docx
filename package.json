@@ -19,8 +19,10 @@
       "require": "./dist/web-docx.umd.js"
     }
   },
+  "types": "./src/types/web-docx.d.ts",
   "scripts": {
-    "test": "npm run build && node example/example.js",
+    "test0": "node example/example0.js",
+    "test1": "node example/example1.ts",
     "release": "standard-version",
     "lint": "eslint --fix .",
     "build": "rollup -c"
@@ -40,10 +42,10 @@
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
+    "@types/html-minifier-terser": "^7.0.2",
+    "@types/node": "^22.15.21",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.32.1",
-    "buffer": "^6.0.3",
-    "crypto-browserify": "^3.12.1",
     "eslint": "^9.27.0",
     "eslint-plugin-import": "^2.31.0",
     "globals": "^16.2.0",
@@ -55,7 +57,6 @@
     "rollup-plugin-polyfill-node": "^0.13.0",
     "rollup-plugin-terser": "^7.0.2",
     "standard-version": "^9.3.1",
-    "stream-browserify": "^3.0.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {

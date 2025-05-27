@@ -11,23 +11,20 @@ Base on [html-to-docx](https://github.com/privateOmega/html-to-docx)
 
 ```bash
 npm i web-docx
-# ts
-npm i -D @types/html-to-docx
 ```
 
 or
 
 ```bash
 yarn add web-docx
-
-# ts
-yarn add -D @types/html-to-docx
 ```
 
 ## Usage
 
 ```js
-await HTMLtoDOCX(htmlString, headerHTMLString, documentOptions, footerHTMLString)
+import HtmlToDocx from 'web-docx';
+
+await HtmlToDocx(htmlString, documentOptions, headerHTMLString, footerHTMLString);
 ```
 
 full fledged examples can be found under `example/`

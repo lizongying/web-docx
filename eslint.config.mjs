@@ -2,8 +2,11 @@ import importPlugin from 'eslint-plugin-import';
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
+import tsParser from '@typescript-eslint/parser';
+
 
 export default defineConfig([globalIgnores(['dist/**/*.js']), {
+  files: ['**/*.js', '**/*.ts', '**/*.tsx'],
   languageOptions: {
     globals: {
       ...globals.node,
@@ -13,7 +16,12 @@ export default defineConfig([globalIgnores(['dist/**/*.js']), {
     ecmaVersion: 2023,
     sourceType: 'module',
 
-    parser: '@typescript-eslint/parser'
+    parser: tsParser,
+    parserOptions: {
+      ecmaVersion: 2023,
+      sourceType: 'module',
+      project: './tsconfig.json'
+    }
   },
 
   plugins: {
@@ -23,7 +31,8 @@ export default defineConfig([globalIgnores(['dist/**/*.js']), {
 
   rules: {
     'default-case': 'off',
-
+    'semi': ['error', 'never'],
+    'indent': ['error', 2],
     'import/extensions': ['error', 'ignorePackages', {
       js: 'never',
       mjs: 'always',
