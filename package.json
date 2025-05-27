@@ -1,0 +1,75 @@
+{
+  "name": "web-docx",
+  "version": "0.1.0",
+  "description": "HTML to DOCX converter",
+  "keywords": [
+    "html",
+    "docx",
+    "html-to-docx",
+    "html to docx",
+    "office",
+    "word"
+  ],
+  "type": "module",
+  "main": "dist/web-docx.umd.js",
+  "module": "dist/web-docx.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/web-docx.esm.js",
+      "require": "./dist/web-docx.umd.js"
+    }
+  },
+  "scripts": {
+    "test": "npm run build && node example/example.js",
+    "release": "standard-version",
+    "lint": "eslint --fix .",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizongying/web-docx.git"
+  },
+  "author": "Li ZongYing <lizongying@msn.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lizongying/web-docx/issues"
+  },
+  "homepage": "https://github.com/lizongying/web-docx#readme",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "eslint": "^9.27.0",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^16.2.0",
+    "html-minifier-terser": "^7.2.0",
+    "rollup": "^4.41.1",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-polyfill-node": "^0.13.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "standard-version": "^9.3.1",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "color-name": "^2.0.0",
+    "html-entities": "^2.3.3",
+    "html-to-vdom": "^0.7.0",
+    "image-size": "^2.0.2",
+    "image-to-base64": "^2.2.0",
+    "jszip": "^3.7.1",
+    "lodash-es": "^4.17.21",
+    "mime-types": "^3.0.1",
+    "nanoid": "^5.1.5",
+    "virtual-dom": "^2.1.1",
+    "xmlbuilder2": "3.1.1"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
