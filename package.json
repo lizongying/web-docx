@@ -1,6 +1,6 @@
 {
   "name": "web-docx",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "HTML to DOCX converter",
   "keywords": [
     "html",
@@ -16,7 +16,8 @@
   "exports": {
     ".": {
       "import": "./dist/web-docx.esm.js",
-      "require": "./dist/web-docx.umd.js"
+      "require": "./dist/web-docx.umd.js",
+      "types": "./types/index.d.ts"
     }
   },
   "types": "./types/index.d.ts",
