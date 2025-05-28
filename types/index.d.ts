@@ -105,6 +105,6 @@ declare function HtmlToDocx(
 /**
  * Web-DOCX module for converting HTML to DOCX documents
  */
-declare module 'types/web-docx' {
+declare module 'web-docx' {
     export default HtmlToDocx
 }

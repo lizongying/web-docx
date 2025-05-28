@@ -1,7 +1,7 @@
 import fs from 'fs'
 import HtmlToDocx from 'web-docx'
-// import HtmlToDocx from '../src/index.js'
-// import HtmlToDocx from '../dist/web-docx'
+// import HtmlToDocx from '../src/index'
+// import HtmlToDocx from '../dist/web-docx.esm'
 
 const filePath = './example.docx'
 import {minify} from 'html-minifier-terser'
