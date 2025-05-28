@@ -1,4 +1,4 @@
-import namespaces from '../namespaces';
+import namespaces from '../namespaces'
 
 const documentRelsXML = `
   <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -10,6 +10,6 @@ const documentRelsXML = `
     <Relationship Id="rId4" Type="${namespaces.webSettingsRelation}" Target="webSettings.xml"/>
     <Relationship Id="rId5" Type="${namespaces.fontTable}" Target="fontTable.xml"/>
   </Relationships>
-`;
+`
 
-export default documentRelsXML;
+export default documentRelsXML

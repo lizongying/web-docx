@@ -1,4 +1,4 @@
-import namespaces from '../namespaces';
+import namespaces from '../namespaces'
 
 // Font data available here: https://fossies.org/linux/pandoc/data/docx/word/fontTable.xml
 const fontTableXML = `
@@ -51,6 +51,6 @@ const fontTableXML = `
             <w:sig w:usb0="E0002EFF" w:usb1="C000785B" w:usb2="00000009" w:usb3="00000000" w:csb0="000001FF" w:csb1="00000000"/>
         </w:font>
     </w:fonts>
-`;
+`
 
-export default fontTableXML;
+export default fontTableXML

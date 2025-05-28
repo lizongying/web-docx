@@ -1,44 +1,46 @@
 import importPlugin from 'eslint-plugin-import';
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
-import { defineConfig, globalIgnores } from 'eslint/config';
+import {defineConfig, globalIgnores} from 'eslint/config';
 import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
 
 
 export default defineConfig([globalIgnores(['dist/**/*.js']), {
-  files: ['**/*.js', '**/*.ts', '**/*.tsx'],
-  languageOptions: {
-    globals: {
-      ...globals.node,
-      ...globals.browser
+    files: ['example/**/*.js', '**/*.js', '**/*.ts', '**/*.tsx'],
+    languageOptions: {
+        globals: {
+            ...globals.node,
+            ...globals.browser
+        },
+
+        ecmaVersion: 2023,
+        sourceType: 'module',
+
+        parser: tsParser,
+        parserOptions: {
+            ecmaVersion: 2023,
+            sourceType: 'module',
+            project: './tsconfig.json'
+        }
     },
 
-    ecmaVersion: 2023,
-    sourceType: 'module',
+    plugins: {
+        import: importPlugin,
+        '@typescript-eslint': typescriptEslintPlugin
+    },
 
-    parser: tsParser,
-    parserOptions: {
-      ecmaVersion: 2023,
-      sourceType: 'module',
-      project: './tsconfig.json'
+    rules: {
+        'default-case': 'off',
+        'semi': ['error', 'never'],
+        'indent': ['error', 4, {
+            "SwitchCase": 1
+        }],
+        'import/extensions': ['error', 'ignorePackages', {
+            js: 'never',
+            mjs: 'always',
+            'esm.js': 'always',
+            ts: 'never',
+            tsx: 'never'
+        }]
     }
-  },
-
-  plugins: {
-    import: importPlugin,
-    '@typescript-eslint': typescriptEslintPlugin
-  },
-
-  rules: {
-    'default-case': 'off',
-    'semi': ['error', 'never'],
-    'indent': ['error', 2],
-    'import/extensions': ['error', 'ignorePackages', {
-      js: 'never',
-      mjs: 'always',
-      'esm.js': 'always',
-      ts: 'never',
-      tsx: 'never'
-    }]
-  }
 }]);

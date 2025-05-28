@@ -1,5 +1,6 @@
 *
 !dist/*
+!types/*
 !example/*
 !package.json
 !package-lock.json

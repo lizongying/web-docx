@@ -3,6 +3,6 @@ const genericRelsXML = `
 
     <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
     </Relationships>
-`;
+`
 
-export default genericRelsXML;
+export default genericRelsXML

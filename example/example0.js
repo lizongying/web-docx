@@ -1,8 +1,8 @@
-import fs from 'fs';
-import HtmlToDocx from 'web-docx';
+import fs from 'fs'
+import HtmlToDocx from 'web-docx'
 
-const filePath = './example.docx';
-import { minify } from 'html-minifier-terser';
+const filePath = './example.docx'
+import { minify } from 'html-minifier-terser'
 
 let htmlString = `<!DOCTYPE html>
 <html lang="en">
@@ -211,20 +211,20 @@ let htmlString = `<!DOCTYPE html>
 </html>`;
 
 (async () => {
-  htmlString = await minify(htmlString, {
-    collapseWhitespace: true
-  });
+    htmlString = await minify(htmlString, {
+        collapseWhitespace: true
+    })
 
-  const fileBuffer = await HtmlToDocx(htmlString, {
-    table: { row: { cantSplit: true } },
-    footer: true,
-    pageNumber: true
-  });
-  fs.writeFile(filePath, fileBuffer, (error) => {
-    if (error) {
-      console.log('Docx file creation failed');
-      return;
-    }
-    console.log('Docx file created successfully');
-  });
-})();
+    const fileBuffer = await HtmlToDocx(htmlString, {
+        table: { row: { cantSplit: true } },
+        footer: true,
+        pageNumber: true
+    })
+    fs.writeFile(filePath, fileBuffer, (error) => {
+        if (error) {
+            console.log('Docx file creation failed')
+            return
+        }
+        console.log('Docx file created successfully')
+    })
+})()

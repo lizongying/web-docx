@@ -1,4 +1,4 @@
-import namespaces from '../namespaces';
+import namespaces from '../namespaces'
 
 const settingsXML = `
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -9,6 +9,6 @@ const settingsXML = `
         <w:decimalSymbol w:val="."/>
         <w:listSeparator w:val=","/>
     </w:settings>
-`;
+`
 
-export default settingsXML;
+export default settingsXML

@@ -1,16 +1,16 @@
-import namespaces from '../namespaces';
-import { applicationName } from '../constants';
+import namespaces from '../namespaces'
+import { applicationName } from '../constants'
 
 const generateCoreXML = (
-  title = '',
-  subject = '',
-  creator = applicationName,
-  keywords = [applicationName],
-  description = '',
-  lastModifiedBy = applicationName,
-  revision = 1,
-  createdAt = new Date(),
-  modifiedAt = new Date()
+    title = '',
+    subject = '',
+    creator = applicationName,
+    keywords = [applicationName],
+    description = '',
+    lastModifiedBy = applicationName,
+    revision = 1,
+    createdAt = new Date(),
+    modifiedAt = new Date()
 ) => `
         <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
@@ -25,20 +25,20 @@ const generateCoreXML = (
             <dc:subject>${subject}</dc:subject>
             <dc:creator>${creator}</dc:creator>
             ${
-              keywords && Array.isArray(keywords)
-                ? `<cp:keywords>${keywords.join(', ')}</cp:keywords>`
-                : ''
-            }
+    keywords && Array.isArray(keywords)
+        ? `<cp:keywords>${keywords.join(', ')}</cp:keywords>`
+        : ''
+}
             <dc:description>${description}</dc:description>
             <cp:lastModifiedBy>${lastModifiedBy}</cp:lastModifiedBy>
             <cp:revision>${revision}</cp:revision>
             <dcterms:created xsi:type="dcterms:W3CDTF">${
-              createdAt instanceof Date ? createdAt.toISOString() : new Date().toISOString()
-            }</dcterms:created>
+    createdAt instanceof Date ? createdAt.toISOString() : new Date().toISOString()
+}</dcterms:created>
             <dcterms:modified xsi:type="dcterms:W3CDTF">${
-              modifiedAt instanceof Date ? modifiedAt.toISOString() : new Date().toISOString()
-            }</dcterms:modified>
+    modifiedAt instanceof Date ? modifiedAt.toISOString() : new Date().toISOString()
+}</dcterms:modified>
         </cp:coreProperties>
-    `;
+    `
 
-export default generateCoreXML;
+export default generateCoreXML

@@ -17,6 +17,6 @@ const contentTypesXML = `
         <Override PartName="/word/settings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"/>
         <Override PartName="/word/webSettings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings+xml"/>
     </Types>
-`;
+`
 
-export default contentTypesXML;
+export default contentTypesXML

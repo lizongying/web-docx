@@ -1,4 +1,4 @@
-import { defaultFont } from '../constants';
+import { defaultFont } from '../constants'
 
 const generateThemeXML = (font = defaultFont) => `
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -194,6 +194,6 @@ const generateThemeXML = (font = defaultFont) => `
       </a:fmtScheme>
     </a:themeElements>
   </a:theme>
-`;
+`
 
-export default generateThemeXML;
+export default generateThemeXML

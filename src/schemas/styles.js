@@ -1,11 +1,11 @@
-import { defaultFont, defaultFontSize, defaultLang } from '../constants';
-import namespaces from '../namespaces';
+import { defaultFont, defaultFontSize, defaultLang } from '../constants'
+import namespaces from '../namespaces'
 
 const generateStylesXML = (
-  font = defaultFont,
-  fontSize = defaultFontSize,
-  complexScriptFontSize = defaultFontSize,
-  lang = defaultLang
+    font = defaultFont,
+    fontSize = defaultFontSize,
+    complexScriptFontSize = defaultFontSize,
+    lang = defaultLang
 ) => `
   <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
@@ -148,6 +148,6 @@ const generateStylesXML = (
 	  </w:rPr>
 	</w:style>
   </w:styles>
-  `;
+  `
 
-export default generateStylesXML;
+export default generateStylesXML

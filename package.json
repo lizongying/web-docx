@@ -1,6 +1,6 @@
 {
   "name": "web-docx",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "HTML to DOCX converter",
   "keywords": [
     "html",
@@ -19,7 +19,7 @@
       "require": "./dist/web-docx.umd.js"
     }
   },
-  "types": "./src/types/web-docx.d.ts",
+  "types": "./types/index.d.ts",
   "scripts": {
     "test0": "node example/example0.js",
     "test1": "node example/example1.ts",

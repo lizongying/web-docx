@@ -1,4 +1,4 @@
-import namespaces from '../namespaces';
+import namespaces from '../namespaces'
 
 const relsXML = `
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -7,6 +7,6 @@ const relsXML = `
         <Relationship Id="rId1" Type="${namespaces.officeDocumentRelation}" Target="word/document.xml"/>
         <Relationship Id="rId2" Type="${namespaces.corePropertiesRelation}" Target="docProps/core.xml"/>
     </Relationships>
-`;
+`
 
-export default relsXML;
+export default relsXML

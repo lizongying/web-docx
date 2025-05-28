@@ -1,4 +1,4 @@
-import namespaces from '../namespaces';
+import namespaces from '../namespaces'
 
 const generateNumberingXMLTemplate = () => `
         <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -13,6 +13,6 @@ const generateNumberingXMLTemplate = () => `
         xmlns:w10="${namespaces.w10}"
         xmlns:wne="${namespaces.wne}">
         </w:numbering>
-    `;
+    `
 
-export default generateNumberingXMLTemplate;
+export default generateNumberingXMLTemplate
