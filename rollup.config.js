@@ -12,7 +12,7 @@ import { readFileSync } from 'fs';
 const meta = JSON.parse(readFileSync('./package.json', 'utf-8'));
 
 export default {
-  input: 'index.js',
+  input: 'src/index.js',
   plugins: [
     alias({
       entries: []
