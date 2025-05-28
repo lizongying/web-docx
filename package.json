@@ -1,6 +1,6 @@
 {
   "name": "web-docx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HTML to DOCX converter",
   "keywords": [
     "html",
@@ -42,6 +42,7 @@
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-replace": "^6.0.2",
     "@types/html-minifier-terser": "^7.0.2",
     "@types/node": "^22.15.21",
     "@typescript-eslint/eslint-plugin": "^8.32.1",

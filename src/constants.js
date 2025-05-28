@@ -1,6 +1,6 @@
 import { cloneDeep } from 'lodash-es';
 
-const applicationName = 'html-to-docx';
+const applicationName = process.env.PACKAGE_NAME;
 const defaultOrientation = 'portrait';
 const landscapeWidth = 15840;
 const landscapeHeight = 12240;
@@ -11,7 +11,7 @@ const landscapeMargins = {
   left: 1440,
   header: 720,
   footer: 720,
-  gutter: 0,
+  gutter: 0
 };
 const portraitMargins = {
   top: 1440,
@@ -20,7 +20,7 @@ const portraitMargins = {
   left: 1800,
   header: 720,
   footer: 720,
-  gutter: 0,
+  gutter: 0
 };
 const defaultFont = 'Times New Roman';
 const defaultFontSize = 22;
@@ -46,12 +46,12 @@ const defaultDocumentOptions = {
   complexScriptFontSize: defaultFontSize,
   table: {
     row: {
-      cantSplit: false,
-    },
+      cantSplit: false
+    }
   },
   pageSize: {
     width: landscapeHeight,
-    height: landscapeWidth,
+    height: landscapeWidth
   },
   pageNumber: false,
   skipFirstHeaderFooter: false,
@@ -59,13 +59,13 @@ const defaultDocumentOptions = {
   lineNumberOptions: {
     countBy: 1,
     start: 0,
-    restart: 'continuous',
+    restart: 'continuous'
   },
   numbering: {
-    defaultOrderedListStyleType: 'decimal',
+    defaultOrderedListStyleType: 'decimal'
   },
   decodeUnicode: false,
-  defaultLang,
+  defaultLang
 };
 const defaultHTMLString = '<p></p>';
 const relsFolderName = '_rels';
@@ -85,23 +85,23 @@ const paragraphBordersObject = {
   top: {
     size: 0,
     spacing: 3,
-    color: 'FFFFFF',
+    color: 'FFFFFF'
   },
   left: {
     size: 0,
     spacing: 3,
-    color: 'FFFFFF',
+    color: 'FFFFFF'
   },
   bottom: {
     size: 0,
     spacing: 3,
-    color: 'FFFFFF',
+    color: 'FFFFFF'
   },
   right: {
     size: 0,
     spacing: 3,
-    color: 'FFFFFF',
-  },
+    color: 'FFFFFF'
+  }
 };
 const colorlessColors = ['transparent', 'auto'];
 const verticalAlignValues = ['top', 'middle', 'bottom'];
@@ -133,5 +133,5 @@ export {
   paragraphBordersObject,
   colorlessColors,
   verticalAlignValues,
-  defaultLang,
+  defaultLang
 };

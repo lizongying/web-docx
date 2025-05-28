@@ -4,6 +4,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import cleaner from 'rollup-plugin-cleaner';
 import alias from '@rollup/plugin-alias';
+import replace from '@rollup/plugin-replace';
+
 
 import { readFileSync } from 'fs';
 
@@ -14,6 +16,11 @@ export default {
   plugins: [
     alias({
       entries: []
+    }),
+    replace({
+      values: {
+        'process.env.PACKAGE_NAME': `'${meta.name}'`
+      }
     }),
     resolve({
       preferBuiltins: false,
@@ -32,14 +39,14 @@ export default {
     {
       file: 'dist/web-docx.esm.js',
       format: 'es',
-      sourcemap: true,
+      sourcemap: false,
       banner: `// ${meta.homepage} v${meta.version} Copyright ${new Date().getFullYear()} ${meta.author}`
     },
     {
       file: 'dist/web-docx.umd.js',
       format: 'umd',
       name: 'HTMLToDOCX',
-      sourcemap: true,
+      sourcemap: false,
       banner: `// ${meta.homepage} v${meta.version} Copyright ${new Date().getFullYear()} ${meta.author}`
     }
   ]
